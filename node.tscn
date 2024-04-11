@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtd2j14tm4lee"]
+
+[ext_resource type="Script" path="res://node.gd" id="1_3mbgg"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_3mbgg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 67.0
+offset_right = 248.0
+offset_bottom = 90.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 124.0
+offset_top = 283.0
+offset_right = 386.0
+offset_bottom = 408.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 159.0
+offset_top = 142.0
+offset_right = 343.0
+offset_bottom = 205.0
+text = "Get Unicode"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
