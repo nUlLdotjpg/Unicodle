@@ -1,0 +1,114 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt68x2g27nwpl"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_escog"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_escog")
+
+[node name="Keyboard" type="VBoxContainer" parent="."]
+offset_left = 527.0
+offset_top = 487.0
+offset_right = 595.0
+offset_bottom = 519.0
+
+[node name="Row1" type="HBoxContainer" parent="Keyboard"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="1" type="Button" parent="Keyboard/Row1"]
+layout_mode = 2
+text = "1"
+
+[node name="2" type="Button" parent="Keyboard/Row1"]
+layout_mode = 2
+text = "2"
+
+[node name="3" type="Button" parent="Keyboard/Row1"]
+layout_mode = 2
+text = "3"
+
+[node name="4" type="Button" parent="Keyboard/Row1"]
+layout_mode = 2
+text = "4"
+
+[node name="5" type="Button" parent="Keyboard/Row1"]
+layout_mode = 2
+text = "5"
+
+[node name="Backspace" type="Button" parent="Keyboard/Row1"]
+layout_mode = 2
+text = "←"
+
+[node name="Row2" type="HBoxContainer" parent="Keyboard"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="6" type="Button" parent="Keyboard/Row2"]
+layout_mode = 2
+text = "6"
+
+[node name="7" type="Button" parent="Keyboard/Row2"]
+layout_mode = 2
+text = "7"
+
+[node name="8" type="Button" parent="Keyboard/Row2"]
+layout_mode = 2
+text = "8"
+
+[node name="9" type="Button" parent="Keyboard/Row2"]
+layout_mode = 2
+text = "9"
+
+[node name="0" type="Button" parent="Keyboard/Row2"]
+layout_mode = 2
+text = "0"
+
+[node name="Return" type="Button" parent="Keyboard/Row2"]
+layout_mode = 2
+text = "↵"
+
+[node name="Row3" type="HBoxContainer" parent="Keyboard"]
+layout_mode = 2
+
+[node name="a" type="Button" parent="Keyboard/Row3"]
+layout_mode = 2
+text = "A"
+
+[node name="b" type="Button" parent="Keyboard/Row3"]
+layout_mode = 2
+text = "B"
+
+[node name="c" type="Button" parent="Keyboard/Row3"]
+layout_mode = 2
+text = "C"
+
+[node name="d" type="Button" parent="Keyboard/Row3"]
+layout_mode = 2
+text = "D"
+
+[node name="e" type="Button" parent="Keyboard/Row3"]
+layout_mode = 2
+text = "E"
+
+[node name="f" type="Button" parent="Keyboard/Row3"]
+layout_mode = 2
+text = "F"
+
+[connection signal="pressed" from="Keyboard/Row1/1" to="." method="userInput" binds= ["1"]]
+[connection signal="pressed" from="Keyboard/Row1/2" to="." method="userInput" binds= ["2"]]
+[connection signal="pressed" from="Keyboard/Row1/3" to="." method="userInput" binds= ["3"]]
+[connection signal="pressed" from="Keyboard/Row1/4" to="." method="userInput" binds= ["4"]]
+[connection signal="pressed" from="Keyboard/Row1/5" to="." method="userInput" binds= ["5"]]
+[connection signal="pressed" from="Keyboard/Row1/Backspace" to="." method="userInput" binds= ["BckSpc"]]
+[connection signal="pressed" from="Keyboard/Row2/6" to="." method="userInput" binds= ["6"]]
+[connection signal="pressed" from="Keyboard/Row2/7" to="." method="userInput" binds= ["7"]]
+[connection signal="pressed" from="Keyboard/Row2/8" to="." method="userInput" binds= ["8"]]
+[connection signal="pressed" from="Keyboard/Row2/9" to="." method="userInput" binds= ["9"]]
+[connection signal="pressed" from="Keyboard/Row2/0" to="." method="userInput" binds= ["0"]]
+[connection signal="pressed" from="Keyboard/Row2/Return" to="." method="userInput" binds= ["Rtrn"]]
+[connection signal="pressed" from="Keyboard/Row3/a" to="." method="userInput" binds= ["A"]]
+[connection signal="pressed" from="Keyboard/Row3/b" to="." method="userInput" binds= ["B"]]
+[connection signal="pressed" from="Keyboard/Row3/c" to="." method="userInput" binds= ["C"]]
+[connection signal="pressed" from="Keyboard/Row3/d" to="." method="userInput" binds= ["D"]]
+[connection signal="pressed" from="Keyboard/Row3/e" to="." method="userInput" binds= ["E"]]
+[connection signal="pressed" from="Keyboard/Row3/f" to="." method="userInput" binds= ["F"]]
