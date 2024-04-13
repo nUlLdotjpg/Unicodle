@@ -1,114 +1,881 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt68x2g27nwpl"]
+[gd_scene load_steps=4 format=3 uid="uid://bt68x2g27nwpl"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_escog"]
+[ext_resource type="Texture2D" uid="uid://b6eopgvyg26pg" path="res://Character Box.png" id="2_ya8wj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p6xf"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_escog")
 
-[node name="Keyboard" type="VBoxContainer" parent="."]
-offset_left = 527.0
-offset_top = 487.0
-offset_right = 595.0
-offset_bottom = 519.0
+[node name="Keyboard" type="GridContainer" parent="."]
+offset_left = 491.0
+offset_top = 522.0
+offset_right = 716.0
+offset_bottom = 623.0
+columns = 2
 
-[node name="Row1" type="HBoxContainer" parent="Keyboard"]
+[node name="Character Keys" type="VBoxContainer" parent="Keyboard"]
+layout_mode = 2
+
+[node name="Row1" type="HBoxContainer" parent="Keyboard/Character Keys"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="1" type="Button" parent="Keyboard/Row1"]
+[node name="1" type="Button" parent="Keyboard/Character Keys/Row1"]
 layout_mode = 2
 text = "1"
 
-[node name="2" type="Button" parent="Keyboard/Row1"]
+[node name="2" type="Button" parent="Keyboard/Character Keys/Row1"]
 layout_mode = 2
 text = "2"
 
-[node name="3" type="Button" parent="Keyboard/Row1"]
+[node name="3" type="Button" parent="Keyboard/Character Keys/Row1"]
 layout_mode = 2
 text = "3"
 
-[node name="4" type="Button" parent="Keyboard/Row1"]
+[node name="4" type="Button" parent="Keyboard/Character Keys/Row1"]
 layout_mode = 2
 text = "4"
 
-[node name="5" type="Button" parent="Keyboard/Row1"]
+[node name="5" type="Button" parent="Keyboard/Character Keys/Row1"]
 layout_mode = 2
 text = "5"
 
-[node name="Backspace" type="Button" parent="Keyboard/Row1"]
-layout_mode = 2
-text = "←"
-
-[node name="Row2" type="HBoxContainer" parent="Keyboard"]
+[node name="Row2" type="HBoxContainer" parent="Keyboard/Character Keys"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="6" type="Button" parent="Keyboard/Row2"]
+[node name="6" type="Button" parent="Keyboard/Character Keys/Row2"]
 layout_mode = 2
 text = "6"
 
-[node name="7" type="Button" parent="Keyboard/Row2"]
+[node name="7" type="Button" parent="Keyboard/Character Keys/Row2"]
 layout_mode = 2
 text = "7"
 
-[node name="8" type="Button" parent="Keyboard/Row2"]
+[node name="8" type="Button" parent="Keyboard/Character Keys/Row2"]
 layout_mode = 2
 text = "8"
 
-[node name="9" type="Button" parent="Keyboard/Row2"]
+[node name="9" type="Button" parent="Keyboard/Character Keys/Row2"]
 layout_mode = 2
 text = "9"
 
-[node name="0" type="Button" parent="Keyboard/Row2"]
+[node name="0" type="Button" parent="Keyboard/Character Keys/Row2"]
 layout_mode = 2
 text = "0"
 
-[node name="Return" type="Button" parent="Keyboard/Row2"]
+[node name="Row3" type="HBoxContainer" parent="Keyboard/Character Keys"]
 layout_mode = 2
-text = "↵"
+size_flags_horizontal = 4
 
-[node name="Row3" type="HBoxContainer" parent="Keyboard"]
-layout_mode = 2
-
-[node name="a" type="Button" parent="Keyboard/Row3"]
+[node name="a" type="Button" parent="Keyboard/Character Keys/Row3"]
 layout_mode = 2
 text = "A"
 
-[node name="b" type="Button" parent="Keyboard/Row3"]
+[node name="b" type="Button" parent="Keyboard/Character Keys/Row3"]
 layout_mode = 2
 text = "B"
 
-[node name="c" type="Button" parent="Keyboard/Row3"]
+[node name="c" type="Button" parent="Keyboard/Character Keys/Row3"]
 layout_mode = 2
 text = "C"
 
-[node name="d" type="Button" parent="Keyboard/Row3"]
+[node name="d" type="Button" parent="Keyboard/Character Keys/Row3"]
 layout_mode = 2
 text = "D"
 
-[node name="e" type="Button" parent="Keyboard/Row3"]
+[node name="e" type="Button" parent="Keyboard/Character Keys/Row3"]
 layout_mode = 2
 text = "E"
 
-[node name="f" type="Button" parent="Keyboard/Row3"]
+[node name="f" type="Button" parent="Keyboard/Character Keys/Row3"]
 layout_mode = 2
 text = "F"
 
-[connection signal="pressed" from="Keyboard/Row1/1" to="." method="userInput" binds= ["1"]]
-[connection signal="pressed" from="Keyboard/Row1/2" to="." method="userInput" binds= ["2"]]
-[connection signal="pressed" from="Keyboard/Row1/3" to="." method="userInput" binds= ["3"]]
-[connection signal="pressed" from="Keyboard/Row1/4" to="." method="userInput" binds= ["4"]]
-[connection signal="pressed" from="Keyboard/Row1/5" to="." method="userInput" binds= ["5"]]
-[connection signal="pressed" from="Keyboard/Row1/Backspace" to="." method="userInput" binds= ["BckSpc"]]
-[connection signal="pressed" from="Keyboard/Row2/6" to="." method="userInput" binds= ["6"]]
-[connection signal="pressed" from="Keyboard/Row2/7" to="." method="userInput" binds= ["7"]]
-[connection signal="pressed" from="Keyboard/Row2/8" to="." method="userInput" binds= ["8"]]
-[connection signal="pressed" from="Keyboard/Row2/9" to="." method="userInput" binds= ["9"]]
-[connection signal="pressed" from="Keyboard/Row2/0" to="." method="userInput" binds= ["0"]]
-[connection signal="pressed" from="Keyboard/Row2/Return" to="." method="userInput" binds= ["Rtrn"]]
-[connection signal="pressed" from="Keyboard/Row3/a" to="." method="userInput" binds= ["A"]]
-[connection signal="pressed" from="Keyboard/Row3/b" to="." method="userInput" binds= ["B"]]
-[connection signal="pressed" from="Keyboard/Row3/c" to="." method="userInput" binds= ["C"]]
-[connection signal="pressed" from="Keyboard/Row3/d" to="." method="userInput" binds= ["D"]]
-[connection signal="pressed" from="Keyboard/Row3/e" to="." method="userInput" binds= ["E"]]
-[connection signal="pressed" from="Keyboard/Row3/f" to="." method="userInput" binds= ["F"]]
+[node name="Misc Keys" type="VBoxContainer" parent="Keyboard"]
+layout_mode = 2
+
+[node name="Backspace" type="Button" parent="Keyboard/Misc Keys"]
+layout_mode = 2
+text = "Backspace"
+
+[node name="Return" type="Button" parent="Keyboard/Misc Keys"]
+layout_mode = 2
+text = "Return"
+
+[node name="Clear" type="Button" parent="Keyboard/Misc Keys"]
+layout_mode = 2
+text = "Clear"
+
+[node name="Display" type="VBoxContainer" parent="."]
+offset_left = 478.0
+offset_top = 57.0
+offset_right = 702.0
+offset_bottom = 462.0
+
+[node name="Title Con" type="MarginContainer" parent="Display"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="Title" type="Label" parent="Display/Title Con"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Unicodle"
+
+[node name="MarginContainer" type="MarginContainer" parent="Display"]
+layout_mode = 2
+
+[node name="CharLabel" type="Label" parent="Display/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Char"
+
+[node name="Guesses" type="VBoxContainer" parent="Display"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Guess1" type="HBoxContainer" parent="Display/Guesses" groups=["GuessCons"]]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Display/Guesses/Guess1"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="U+" type="Label" parent="Display/Guesses/Guess1/MarginContainer"]
+layout_mode = 2
+text = "U+"
+
+[node name="Char1" type="AspectRatioContainer" parent="Display/Guesses/Guess1"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess1/Char1"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess1/Char1"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char1Con" type="AspectRatioContainer" parent="Display/Guesses/Guess1/Char1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess1/Char1/Char1Con" groups=["Chars", "G1Chars"]]
+layout_mode = 2
+text = "1"
+
+[node name="Char2" type="AspectRatioContainer" parent="Display/Guesses/Guess1"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess1/Char2"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess1/Char2"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char2Con" type="AspectRatioContainer" parent="Display/Guesses/Guess1/Char2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess1/Char2/Char2Con" groups=["Chars", "G1Chars"]]
+layout_mode = 2
+text = "2"
+
+[node name="Char3" type="AspectRatioContainer" parent="Display/Guesses/Guess1"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess1/Char3"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess1/Char3"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char3Con" type="AspectRatioContainer" parent="Display/Guesses/Guess1/Char3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess1/Char3/Char3Con" groups=["Chars", "G1Chars"]]
+layout_mode = 2
+text = "3"
+
+[node name="Char4" type="AspectRatioContainer" parent="Display/Guesses/Guess1"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess1/Char4"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess1/Char4"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char4Con" type="AspectRatioContainer" parent="Display/Guesses/Guess1/Char4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess1/Char4/Char4Con" groups=["Chars", "G1Chars"]]
+layout_mode = 2
+text = "4"
+
+[node name="Char5" type="AspectRatioContainer" parent="Display/Guesses/Guess1"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess1/Char5"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess1/Char5"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char5Con" type="AspectRatioContainer" parent="Display/Guesses/Guess1/Char5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess1/Char5/Char5Con" groups=["Chars", "G1Chars"]]
+layout_mode = 2
+text = "5"
+
+[node name="Guess2" type="HBoxContainer" parent="Display/Guesses" groups=["GuessCons"]]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Display/Guesses/Guess2"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="U+" type="Label" parent="Display/Guesses/Guess2/MarginContainer"]
+layout_mode = 2
+text = "U+"
+
+[node name="Char1" type="AspectRatioContainer" parent="Display/Guesses/Guess2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess2/Char1"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess2/Char1"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char1Con" type="AspectRatioContainer" parent="Display/Guesses/Guess2/Char1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess2/Char1/Char1Con" groups=["Chars", "G2Chars"]]
+layout_mode = 2
+text = "1"
+
+[node name="Char2" type="AspectRatioContainer" parent="Display/Guesses/Guess2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess2/Char2"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess2/Char2"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char2Con" type="AspectRatioContainer" parent="Display/Guesses/Guess2/Char2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess2/Char2/Char2Con" groups=["Chars", "G2Chars"]]
+layout_mode = 2
+text = "2"
+
+[node name="Char3" type="AspectRatioContainer" parent="Display/Guesses/Guess2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess2/Char3"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess2/Char3"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char3Con" type="AspectRatioContainer" parent="Display/Guesses/Guess2/Char3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess2/Char3/Char3Con" groups=["Chars", "G2Chars"]]
+layout_mode = 2
+text = "3"
+
+[node name="Char4" type="AspectRatioContainer" parent="Display/Guesses/Guess2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess2/Char4"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess2/Char4"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char4Con" type="AspectRatioContainer" parent="Display/Guesses/Guess2/Char4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess2/Char4/Char4Con" groups=["Chars", "G2Chars"]]
+layout_mode = 2
+text = "4"
+
+[node name="Char5" type="AspectRatioContainer" parent="Display/Guesses/Guess2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess2/Char5"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess2/Char5"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char5Con" type="AspectRatioContainer" parent="Display/Guesses/Guess2/Char5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess2/Char5/Char5Con" groups=["Chars", "G2Chars"]]
+layout_mode = 2
+text = "5"
+
+[node name="Guess3" type="HBoxContainer" parent="Display/Guesses" groups=["GuessCons"]]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Display/Guesses/Guess3"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="U+" type="Label" parent="Display/Guesses/Guess3/MarginContainer"]
+layout_mode = 2
+text = "U+"
+
+[node name="Char1" type="AspectRatioContainer" parent="Display/Guesses/Guess3"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess3/Char1"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess3/Char1"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char1Con" type="AspectRatioContainer" parent="Display/Guesses/Guess3/Char1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess3/Char1/Char1Con" groups=["Chars", "G3Chars"]]
+layout_mode = 2
+text = "1"
+
+[node name="Char2" type="AspectRatioContainer" parent="Display/Guesses/Guess3"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess3/Char2"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess3/Char2"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char2Con" type="AspectRatioContainer" parent="Display/Guesses/Guess3/Char2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess3/Char2/Char2Con" groups=["Chars", "G3Chars"]]
+layout_mode = 2
+text = "2"
+
+[node name="Char3" type="AspectRatioContainer" parent="Display/Guesses/Guess3"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess3/Char3"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess3/Char3"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char3Con" type="AspectRatioContainer" parent="Display/Guesses/Guess3/Char3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess3/Char3/Char3Con" groups=["Chars", "G3Chars"]]
+layout_mode = 2
+text = "3"
+
+[node name="Char4" type="AspectRatioContainer" parent="Display/Guesses/Guess3"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess3/Char4"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess3/Char4"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char4Con" type="AspectRatioContainer" parent="Display/Guesses/Guess3/Char4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess3/Char4/Char4Con" groups=["Chars", "G3Chars"]]
+layout_mode = 2
+text = "4"
+
+[node name="Char5" type="AspectRatioContainer" parent="Display/Guesses/Guess3"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess3/Char5"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess3/Char5"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char5Con" type="AspectRatioContainer" parent="Display/Guesses/Guess3/Char5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess3/Char5/Char5Con" groups=["Chars", "G3Chars"]]
+layout_mode = 2
+text = "5"
+
+[node name="Guess4" type="HBoxContainer" parent="Display/Guesses" groups=["GuessCons"]]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Display/Guesses/Guess4"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="U+" type="Label" parent="Display/Guesses/Guess4/MarginContainer"]
+layout_mode = 2
+text = "U+"
+
+[node name="Char1" type="AspectRatioContainer" parent="Display/Guesses/Guess4"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess4/Char1"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess4/Char1"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char1Con" type="AspectRatioContainer" parent="Display/Guesses/Guess4/Char1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess4/Char1/Char1Con" groups=["Chars", "G4Chars"]]
+layout_mode = 2
+text = "1"
+
+[node name="Char2" type="AspectRatioContainer" parent="Display/Guesses/Guess4"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess4/Char2"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess4/Char2"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char2Con" type="AspectRatioContainer" parent="Display/Guesses/Guess4/Char2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess4/Char2/Char2Con" groups=["Chars", "G4Chars"]]
+layout_mode = 2
+text = "2"
+
+[node name="Char3" type="AspectRatioContainer" parent="Display/Guesses/Guess4"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess4/Char3"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess4/Char3"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char3Con" type="AspectRatioContainer" parent="Display/Guesses/Guess4/Char3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess4/Char3/Char3Con" groups=["Chars", "G4Chars"]]
+layout_mode = 2
+text = "3"
+
+[node name="Char4" type="AspectRatioContainer" parent="Display/Guesses/Guess4"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess4/Char4"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess4/Char4"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char4Con" type="AspectRatioContainer" parent="Display/Guesses/Guess4/Char4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess4/Char4/Char4Con" groups=["Chars", "G4Chars"]]
+layout_mode = 2
+text = "4"
+
+[node name="Char5" type="AspectRatioContainer" parent="Display/Guesses/Guess4"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess4/Char5"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess4/Char5"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char5Con" type="AspectRatioContainer" parent="Display/Guesses/Guess4/Char5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess4/Char5/Char5Con" groups=["Chars", "G4Chars"]]
+layout_mode = 2
+text = "5"
+
+[node name="Guess5" type="HBoxContainer" parent="Display/Guesses" groups=["GuessCons"]]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Display/Guesses/Guess5"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="U+" type="Label" parent="Display/Guesses/Guess5/MarginContainer"]
+layout_mode = 2
+text = "U+"
+
+[node name="Char1" type="AspectRatioContainer" parent="Display/Guesses/Guess5"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess5/Char1"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess5/Char1"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char1Con" type="AspectRatioContainer" parent="Display/Guesses/Guess5/Char1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess5/Char1/Char1Con" groups=["Chars", "G5Chars"]]
+layout_mode = 2
+text = "1"
+
+[node name="Char2" type="AspectRatioContainer" parent="Display/Guesses/Guess5"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess5/Char2"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess5/Char2"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char2Con" type="AspectRatioContainer" parent="Display/Guesses/Guess5/Char2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess5/Char2/Char2Con" groups=["Chars", "G5Chars"]]
+layout_mode = 2
+text = "2"
+
+[node name="Char3" type="AspectRatioContainer" parent="Display/Guesses/Guess5"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess5/Char3"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess5/Char3"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char3Con" type="AspectRatioContainer" parent="Display/Guesses/Guess5/Char3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess5/Char3/Char3Con" groups=["Chars", "G5Chars"]]
+layout_mode = 2
+text = "3"
+
+[node name="Char4" type="AspectRatioContainer" parent="Display/Guesses/Guess5"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess5/Char4"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess5/Char4"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char4Con" type="AspectRatioContainer" parent="Display/Guesses/Guess5/Char4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess5/Char4/Char4Con" groups=["Chars", "G5Chars"]]
+layout_mode = 2
+text = "4"
+
+[node name="Char5" type="AspectRatioContainer" parent="Display/Guesses/Guess5"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess5/Char5"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess5/Char5"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char5Con" type="AspectRatioContainer" parent="Display/Guesses/Guess5/Char5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess5/Char5/Char5Con" groups=["Chars", "G5Chars"]]
+layout_mode = 2
+text = "5"
+
+[node name="Guess6" type="HBoxContainer" parent="Display/Guesses" groups=["GuessCons"]]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Display/Guesses/Guess6"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="U+" type="Label" parent="Display/Guesses/Guess6/MarginContainer"]
+layout_mode = 2
+text = "U+"
+
+[node name="Char1" type="AspectRatioContainer" parent="Display/Guesses/Guess6"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess6/Char1"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess6/Char1"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char1Con" type="AspectRatioContainer" parent="Display/Guesses/Guess6/Char1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess6/Char1/Char1Con" groups=["Chars", "G6Chars"]]
+layout_mode = 2
+text = "1"
+
+[node name="Char2" type="AspectRatioContainer" parent="Display/Guesses/Guess6"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess6/Char2"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess6/Char2"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char2Con" type="AspectRatioContainer" parent="Display/Guesses/Guess6/Char2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess6/Char2/Char2Con" groups=["Chars", "G6Chars"]]
+layout_mode = 2
+text = "2"
+
+[node name="Char3" type="AspectRatioContainer" parent="Display/Guesses/Guess6"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess6/Char3"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess6/Char3"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char3Con" type="AspectRatioContainer" parent="Display/Guesses/Guess6/Char3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess6/Char3/Char3Con" groups=["Chars", "G6Chars"]]
+layout_mode = 2
+text = "3"
+
+[node name="Char4" type="AspectRatioContainer" parent="Display/Guesses/Guess6"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess6/Char4"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess6/Char4"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char4Con" type="AspectRatioContainer" parent="Display/Guesses/Guess6/Char4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess6/Char4/Char4Con" groups=["Chars", "G6Chars"]]
+layout_mode = 2
+text = "4"
+
+[node name="Char5" type="AspectRatioContainer" parent="Display/Guesses/Guess6"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Display/Guesses/Guess6/Char5"]
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Display/Guesses/Guess6/Char5"]
+layout_mode = 2
+texture = ExtResource("2_ya8wj")
+
+[node name="Char5Con" type="AspectRatioContainer" parent="Display/Guesses/Guess6/Char5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Display/Guesses/Guess6/Char5/Char5Con" groups=["Chars", "G6Chars"]]
+layout_mode = 2
+text = "5"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+offset_left = 430.0
+offset_top = 280.0
+offset_right = 821.0
+offset_bottom = 379.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5p6xf")
+
+[node name="Game Over Msg" type="Label" parent="PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "Game Over"
+
+[connection signal="pressed" from="Keyboard/Character Keys/Row1/1" to="." method="userInput" binds= ["1"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row1/2" to="." method="userInput" binds= ["2"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row1/3" to="." method="userInput" binds= ["3"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row1/4" to="." method="userInput" binds= ["4"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row1/5" to="." method="userInput" binds= ["5"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row2/6" to="." method="userInput" binds= ["6"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row2/7" to="." method="userInput" binds= ["7"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row2/8" to="." method="userInput" binds= ["8"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row2/9" to="." method="userInput" binds= ["9"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row2/0" to="." method="userInput" binds= ["0"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row3/a" to="." method="userInput" binds= ["A"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row3/b" to="." method="userInput" binds= ["B"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row3/c" to="." method="userInput" binds= ["C"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row3/d" to="." method="userInput" binds= ["D"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row3/e" to="." method="userInput" binds= ["E"]]
+[connection signal="pressed" from="Keyboard/Character Keys/Row3/f" to="." method="userInput" binds= ["F"]]
+[connection signal="pressed" from="Keyboard/Misc Keys/Backspace" to="." method="userInput" binds= ["BckSpc"]]
+[connection signal="pressed" from="Keyboard/Misc Keys/Return" to="." method="userInput" binds= ["Rtrn"]]
+[connection signal="pressed" from="Keyboard/Misc Keys/Clear" to="." method="userInput" binds= ["Clear"]]
